@@ -1,9 +1,8 @@
 let element = document.querySelector("#validation-input");
-let minLength = element.dataset.length;
-
+let length = parseInt(element.dataset.length);
 
 element.addEventListener("blur", () => {
-    if (element.value.length >= minLength) {
+    if (element.value.length === length) {
         element.className = "valid";
     } else {
         element.className = "invalid";
